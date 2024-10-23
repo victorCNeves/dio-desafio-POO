@@ -3,7 +3,9 @@ package br.com.dio.desafio.dominio;
 public class Curso extends Conteudo{
     private int cargaHoraria;
 
-    public Curso() {
+    public Curso(String titulo, String descricao, int cargaHoraria) {
+        super(titulo, descricao);
+        this.cargaHoraria = cargaHoraria;
     }
 
     public int getCargaHoraria() {
@@ -21,7 +23,7 @@ public class Curso extends Conteudo{
 
     @Override
     public String toString() {
-        return "Mentoria{'" + "titulo=" + getTitulo() + "', descricao=' " + getDescricao() +
+        return "Curso{'" + "titulo=" + getTitulo() + "', descricao=' " + getDescricao() +
                 "', carga horaria=" + cargaHoraria +
                 '}';
     }
